@@ -30,7 +30,7 @@
 * [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
   - Live Scratchpad for JavaScript - a rapid prototyping playground in your editor, with access to your project’s files, inline reporting, code coverage and rich output formatting.
 
-## Moj _minimal_ user `settings.json` fajl
+## Moj _minimal_ user `settings.json` fajl:
 ```json
 {
     "workbench.iconTheme": "vscode-icons",
@@ -49,7 +49,44 @@
 }
 ```
 
-## CJ's user `settings.json` fajl
+## Moj user `settings.json` fajl:
+```json
+{
+    "editor.fontLigatures": true,
+    "editor.formatOnPaste": false,
+    "editor.mouseWheelZoom": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.parameterHints.cycle": true,
+    "editor.snippetSuggestions": "top",
+    "editor.tabSize": 2,
+    "emmet.showAbbreviationSuggestions": false,
+    "eslint.validate": [{
+            "language": "vue",
+            "autoFix": true
+        },
+        {
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "javascript",
+            "autoFix": true
+        }
+    ],
+    "explorer.openEditors.visible": 0,
+    "files.autoSave": "onFocusChange",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "git.autofetch": true,
+    "team.showWelcomeMessage": false,
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.startupEditor": "newUntitledFile"
+}
+```
+
+## CJ's user `settings.json` fajl:
 ```json
 {
   "editor.snippetSuggestions": "top",
