@@ -23,12 +23,53 @@
 * [Npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
   - Visual Studio Code plugin that autocompletes npm modules in import statements
 #### Additional tools
+* [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+  - Launch a development local Server with live reload feature for static & dynamic pages
+* [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+  - Visualize code authorship at a glance via Git blame annotations and code lens, seamlessly navigate and explore Git repositories, gain valuable insights via powerful comparison commands, and so much more
 * [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
   - Vue tooling for VS Code, powered by [vue-language-server](https://github.com/vuejs/vetur/tree/master/server).
 * [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
   - This extension will display inline in the editor the size of the imported package.
 * [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
   - Live Scratchpad for JavaScript - a rapid prototyping playground in your editor, with access to your project’s files, inline reporting, code coverage and rich output formatting.
+  
+## Spisak ekstenzija (korisno za command line tj. terminal) i automatizaciju instalacije:
+Dobija se pomoću:
+  `code --list-extensions` .
+Tu listu je mogće snimiti u fajl i u terminalu instalirti jednu po jednu pomoću:
+  `code --install-extension ( | )`.
+U **bash**-u na primer može:
+```sh
+cat file... | xargs -n1 code --install-extension
+```
+
+Sa [Visual Studio Code Docs](https://code.visualstudio.com/docs/editor/extension-gallery):
+
+_Extensions are installed in a per user extensions folder. Depending on your platform, the location is in the following folder:
+  **Windows** ```sh %USERPROFILE%\.vscode\extensions ```
+  **macOS** ```sh ~/.vscode/extensions ```
+  **Linux** ```sh ~/.vscode/extensions ```
+You can change the location by launching VS Code with the `--extensions-dir <dir>` command line option._
+
+**Lista:**
+```
+christian-kohler.npm-intellisense
+christian-kohler.path-intellisense
+CoenraadS.bracket-pair-colorizer
+dbaeumer.vscode-eslint
+eamodio.gitlens
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
+HookyQR.beautify
+octref.vetur
+patbenatar.advanced-new-file
+ritwickdey.LiveServer
+robertohuertasm.vscode-icons
+WallabyJs.quokka-vscode
+wix.vscode-import-cost
+Zignd.html-css-class-completion
+```
 
 ## Moj _minimal_ user `settings.json` fajl:
 ```json
