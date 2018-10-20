@@ -15,6 +15,8 @@
   - Integrates ESLint JavaScript into VS Code.
 * [Beautify](https://marketplace.visualstudio.com/items?itemName=hookyqr.beautify)
   - Beautify javascript, JSON, CSS, Sass, and HTML in Visual Studio Code.
+* [Babel JavaScript](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)
+  - JavaScript syntax highlighting for ES201x, React JSX, Flow and GraphQL. Only the syntax highlighting. The transpiling and configuration is not included.
 #### Coding helpers
 * [IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
   - CSS class name completion for the HTML class attribute based on the definitions found in your workspace.
@@ -62,6 +64,7 @@ eamodio.gitlens
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 HookyQR.beautify
+mgmcdermott.vscode-language-babel
 octref.vetur
 patbenatar.advanced-new-file
 ritwickdey.LiveServer
