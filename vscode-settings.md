@@ -103,6 +103,7 @@ Zignd.html-css-class-completion
     "editor.parameterHints.cycle": true,
     "editor.snippetSuggestions": "top",
     "editor.tabSize": 2,
+    "editor.fontSize": 16,
     "emmet.showAbbreviationSuggestions": false,
     "eslint.validate": [{
             "language": "vue",
@@ -124,7 +125,7 @@ Zignd.html-css-class-completion
     },
     "git.autofetch": true,
     "team.showWelcomeMessage": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile"
 }
