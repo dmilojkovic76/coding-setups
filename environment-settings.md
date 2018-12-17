@@ -98,7 +98,7 @@ Posle toga moze da se koristi `nvm install xxxxxxxx` ili `nvm ls-remote`
 
 ## Ostalo
 ### Visual Studio Code:
-Install pomocu `brew cask install visual-studio-code` a podesavanja su objasnjena u [https://github.com/dmilojkovic76/coding-setups/blob/master/vscode-settings.md](drugom fajlu) ovog repositorija.
+Install pomocu `brew cask install visual-studio-code` a podesavanja su objasnjena u [https://github.com/dmilojkovic76/coding-setups/blob/master/vscode-settings.md](vscode-settings.md) fajlu ovog repositorija.
 Ostaje i `npm install -g eslint`
 
 ### Android Studio
