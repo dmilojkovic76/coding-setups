@@ -52,6 +52,10 @@ cd ~
 git clone https://github.com/bhilburn/powerlevel9k.git ~/powerlevel9k
 mv ~/powerlevel9k ~/.powerlevel9k
 ```
+### Autocomplete i coloring za terminal
+```sh
+brew install zsh-autosuggestions zsh-syntax-highlighting
+```
 
 Editovati `~/.zshrc` tako da izgleda ovako:
 ```sh
@@ -104,6 +108,13 @@ Ostaje i `npm install -g eslint`
 ### Android Studio
 Download i install [https://developer.android.com/studio](Android studio) a onda ga pokrenuti i instalirati __Android SDK, Android SDK Platform-Tools i Android SDK Build-Tools__
 
+Ako se Android SDK ne instalira na default mesto onda mora da se doda par stvari u ˜.bashrc ili ˜.zshrc ili sl
+```sh
+# Setup Android SDK
+export ANDROID_HOME="/putanja/do/android/Sdk"
+export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/platform-tools
+```
+
 ### Xcode
 Install >Xcode 9.0 sa [https://developer.apple.com/xcode/](web download) ili [https://itunes.apple.com/us/app/xcode/id497799835](Mac App Store).
 Configure the Xcode command-line tools to use the newly-installed version of Xcode by running the following from the command line:
@@ -112,7 +123,7 @@ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 ```
 
 ### Flutter
-Proveri prvo da li sistem ima `bash, mkdir, rm, git, curl, unzip, which` pa onda sa [https://flutter.io](flutter.io) skinuti Flutter SDK i instalirati pomocu:
+Proveri prvo da li sistem ima `bash, mkdir, rm, git, curl, unzip, which` pa onda sa [https://flutter.io](flutter.io) skinuti Flutter SDK i instalirati. Na primer za macOS bi moglo ovako:
 ```sh
 cd ~
 unzip ~/Downloads/flutter_macos_v1.0.0-stable.zip
@@ -124,17 +135,28 @@ Na [https://flutter.io/docs/get-started/install/macos](flutter.io getting starte
 
 Takodje treba dodati pluginove u Android Atudio u Visual Studio Code.
 
-## Moj ceo `~/.zshrc`
+## Moj ceo `~/.zshrc` na macOS
 ```sh
 # Setup nvm - Node Version Controll
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-# Make ls command display coloured file names
+# Setup Android SDK
+export ANDROID_HOME="/Volumes/STORAGE/Android/Sdk-mac"
+export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/platform-tools
+
+# Setup flutter
+export PATH=$PATH:"/Volumes/STORAGE/Android/flutter-mac/bin"
+
+# Neki fix na mojoj masini koji je predlozio brew doctor
+# Moguce je da na cistoj instalaciji sistema ovo ne treba
+export PATH="/usr/local/sbin:$PATH"
+
+# Alisi da ls prikazuje listinge u boji
 alias ls='ls -G'
 alias lal='ls -al'
 
-# Load Nerd Fonts with Powerlevel9k theme for Zsh
+# Setup Nerd Fonts sa Powerlevel9k temom za Zsh
 POWERLEVEL9K_MODE='nerdfont-complete'
 source ~/.powerlevel9k/powerlevel9k.zsh-theme
 
@@ -148,12 +170,12 @@ POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
 POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
 POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
 
-# Customise the Powerlevel9k prompts
+# Powerlevel9k prompt kastomizacija
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
-# Load Zsh tools for syntax highlighting and autosuggestions
+# Setup Zsh dodatke za syntax highlighting i autosuggestions
 HOMEBREW_FOLDER="/usr/local/share"
 source "$HOMEBREW_FOLDER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
