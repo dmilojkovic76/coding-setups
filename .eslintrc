@@ -1,0 +1,49 @@
+// npm i -D eslint
+// npm i -D eslint-plugin-fp
+// SOME ESLINT RULES TO ENHANCE CODING STYLE & SKILLS
+
+env:
+  es6: true
+ 
+plugins:
+  fp
+  
+rules:
+//Long files also are a symptom of a bigger problem — the code probably is doing too much
+  max-lines:
+  - warn
+  - 200
+  // Long functions add to complexity, they are hard to reason about, they typically have too many responsibilities and are hard to test.
+  max-lines-per-function:
+  - warn
+  - 20
+  // Function complexity
+  // Nested callbacks often result in callback hell. It can be easily mitigated by promisifying the callbacks and then making use of async-await.
+  // Another major source of function complexity is cyclomatic complexity. In a nutshell, it refers to the number of statements (logic) in any given function. 
+  complexity:
+  - warn
+  - 5
+  max-nested-callbacks:
+  - warn
+  - 2
+  max-depth:
+  - warn
+  - 3
+  // Immutability - Mutable state is one of the biggest sources of complexity in software.
+  no-param-reassign: warn
+  fp/no-mutating-assign: warn
+  fp/no-mutating-methods: warn
+  fp/no-mutation: warn
+  // Let keyword can lead to unexpected reassigns. Use const and extract to functions instead.
+  fp/no-let: warn
+  // This keyword is a bad language design and should be avoided if possible
+  fp/no-this: warn
+  // For more elegant code, use declarative programming instead of imperative programming
+  fp/no-loops: warn
+  fp/no-delete: warn
+  // ES6 brings many great features to the table, including destructuring objects, which can also be used for function arguments.
+  max-params:
+  - warn
+  - 2
+  // Make sure that you throw errors responsibly, in exceptional circumstances, when you expect the program to crash.
+  fp/no-throw: warn
